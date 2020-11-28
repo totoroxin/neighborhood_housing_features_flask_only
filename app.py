@@ -1,9 +1,6 @@
 from threading import Thread
 
-from bokeh.embed import components, server_document
-from bokeh.server.server import Server
 from flask import Flask, render_template
-from tornado.ioloop import IOLoop
 
 app = Flask(__name__)
 
