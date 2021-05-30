@@ -55,7 +55,7 @@
           <li class="active"><a href="/">Home</a></li>
 
           <li><a href="#story">Story</a></li>
-          <li><a href="#cat-rent">Neighborhood Features</a></li>
+          <li><a href="#feature">Neighborhood Features</a></li>
           <li><a href="#median-rent">Median Rent</a></li>
           <li><a href="#predicted-rent">Predicted Rent</a></li>
           <li><a href="#methods">Methods</a></li>
@@ -113,8 +113,28 @@
                     Predict average neighborhood rental prices based on the neighborhood socio-spatial features.
                   </li>
                   <li>
+                      <b>Quantitatively evaluate location.</b>
+                  </li>
+                  <li>
                     <i class="bx"> </i>
                     Identify the key environmental features for increasing the neighborhood rental market values.
+                  </li>
+                  <li>
+                      <b>Features can be feasibly changed or improved.</b>
+                  </li>
+                </ul>
+          </div>
+
+          <div class="col-lg-6 order-2 order-lg-1 mt-3 mt-lg-0">
+            <h3>Applications</h3>
+                <ul>
+                  <li>
+                    <i class="bx"> </i>
+                    Scenario 1: own a property and seek ways to improve its value
+                  </li>
+                  <li>
+                    <i class="bx"> </i>
+                    Scenario 2: seek a new property to invest
                   </li>
                 </ul>
           </div>
@@ -133,6 +153,32 @@
           
       </div>
     </section><!-- End Story Section -->
+
+      
+    <!-- ======= Feature Section ======= -->
+    <section id="feature" class="dark-bg-default">
+      <div class="container" data-aos="fade-up">
+          
+        <div class="row">
+            
+          <div class="col-lg-6 video-box align-self-baseline" data-aos="zoom-in" data-aos-delay="100">
+            <img src="static/img/categories.jpg" class="img-fluid" alt="">
+          </div>
+          
+          <div class="col-lg-6 video-box align-self-baseline" data-aos="zoom-in" data-aos-delay="100">
+            <img src="static/img/features.jpg" class="img-fluid" alt="">
+          </div>
+
+        </div>
+
+        <div class="row extra-padding">
+          <div class="col text-center">
+            <a href="#cat-rent" class="dark-next-btn scrollto">Next</a>
+          </div>
+        </div>
+          
+      </div>
+    </section><!-- End Feature Section -->
 
       
     <!-- ======= Categories vs Rents Section ======= -->
@@ -288,18 +334,24 @@
         <ul class="nav nav-tabs row d-flex">
           <li class="nav-item col-3">
             <a class="nav-link active show" data-toggle="tab" href="#tab-1">
+              <i class="ri-sun-line"></i>
+              <h4 class="d-none d-lg-block">Discussion</h4>
+            </a>
+          </li>
+          <li class="nav-item col-3">
+            <a class="nav-link active show" data-toggle="tab" href="#tab-2">
               <i class="ri-gps-line"></i>
               <h4 class="d-none d-lg-block">Data Engineering</h4>
             </a>
           </li>
           <li class="nav-item col-3">
-            <a class="nav-link" data-toggle="tab" href="#tab-2">
+            <a class="nav-link" data-toggle="tab" href="#tab-3">
               <i class="ri-body-scan-line"></i>
               <h4 class="d-none d-lg-block">Machine Learning</h4>
             </a>
           </li>
           <li class="nav-item col-3">
-            <a class="nav-link" data-toggle="tab" href="#tab-3">
+            <a class="nav-link" data-toggle="tab" href="#tab-4">
               <i class="ri-sun-line"></i>
               <h4 class="d-none d-lg-block">Github</h4>
             </a>
@@ -308,6 +360,30 @@
 
         <div class="tab-content">
           <div class="tab-pane active show" id="tab-1">
+            <div class="row">
+              <div class="col-lg-5 order-2 order-lg-1 mt-3 mt-lg-0">
+                <h3>Challenges</h3>
+                <p>
+                    <b>- Contextual difference</b>
+                  <li>dense cities vs. less dense cities</li>
+                </p>
+                <p>
+                    <b>- Data acquistion</b>
+                  <li>limited accessible data sources</li>
+                </p>
+                <h3>Future works</h3>
+                <p>
+                    <b>- Centrality for each place</b>
+                  <li>Use PageRank to calculate the centralities based on the immigration/migration data to evaluate the attractiveness of places.</li>
+                </p>
+                <p>
+                    <b>- Neighborhood classifications</b>
+                  <li>Use spatial features to classify the neighborhood by its growth potentials.</li>
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="tab-pane active show" id="tab-2">
             <div class="row">
               <div class="col-lg-5 order-2 order-lg-1 mt-3 mt-lg-0">
                 <h3>Where did the data come from?</h3>
@@ -329,7 +405,7 @@
               </div>
             </div>
           </div>
-          <div class="tab-pane" id="tab-2">
+          <div class="tab-pane" id="tab-3">
             <div class="row">
               <div class="col-lg-6 order-2 order-lg-1 mt-3 mt-lg-0">
                 <h3>Models and Results</h3>
@@ -337,16 +413,16 @@
 
                 </p>
                 <p>
-                  The project extracted 43 detailed features from six categories (excluded housing cost itself) indcluding demographics to explore the individual effects.
+                  The project extracted 43 detailed features from six categories (excluded housing cost itself). Including demographics to explore the individual effects.
                 </p>
                 <ul>
                   <li>
                     <i class="bx bx-check-double"> </i>
-                    The results from three methods (random forest, Ada boosting, and gradient boosting) showed the 43 features provided 80%-84% accuracies (calcuated from MAPE) to predict neighborhood average rents."
+                    The results from three methods (random forest, Ada boosting, and XG boosting) showed the 43 features provided 80%-84% accuracies (calculated from MAPE) to predict average neighborhood rents."
                   </li>
                   <li>
                     <i class="bx bx-check-double"> </i>
-                    The top important features the models observed were: transportation (number of jobs accessible within a 45-minute transit commute and number of jobs accessible within a 45-minute automobile commute), street safety design (annual average number of fatal crashes per 100,000 people), accessibility to markets (number of grocery stores and farmers’ markets within a half-mile), walkable environments (estimated walk trips per household per day), and mixed land use (mix of jobs within a mile).
+                    The top essential features the models observed were: transportation (number of jobs accessible within a 45-minute transit commute and number of jobs accessible within a 45-minute automobile commute), street safety design (annual average number of fatal crashes per 100,000 people), accessibility to markets (number of grocery stores and farmers' markets within a half-mile), walkable environments (estimated walk trips per household per day), and mixed land use (mix of jobs within a mile).
                   </li>
                 </ul>
               </div>
@@ -359,7 +435,7 @@
               </div>
             </div>
           </div>
-          <div class="tab-pane" id="tab-3">
+          <div class="tab-pane" id="tab-4">
             <div class="row">
               <div class="col-lg-6 order-2 order-lg-1 mt-3 mt-lg-0">
                 <h3> </h3>

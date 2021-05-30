@@ -17,6 +17,11 @@ chmod 600 <PROJECT_PEM_NAME>.pem
 ssh-add <PROJECT_PEM_NAME>.pem
 ssh ubuntu@<PROJECT_PUBLIC_IP_ADDRESS>
 ```
+or
+```
+chmod 600 <PROJECT_PEM_NAME>.pem
+ssh -i VUN.pem ubuntu@3.130.17.76
+```
 
 Note: the above steps can be replaced by using **PuTTY** to connect to AWS host in Windows
 
@@ -124,4 +129,9 @@ kill [process id]
 or enforced close, SIGKILL
 ```
 kill -9 [process id]
+```
+
+### Update files from github
+```
+git pull --rebase
 ```
